@@ -22,11 +22,12 @@ public class Solution2 {
         for (int i = 0; i < plots.length; i++) {
             partial += plots[i];
 
-            if (partial == 0 && max == 0) { //we don't want a set with profitability: 0 0 0 4
-                leftIndex++;
-            }
+            //don't need it, add "=" in the next if statement
+//            if (partial == 0 && max == 0) { //we don't want a set with profitability: 0 0 0 4
+//                leftIndex++;
+//            }
 
-            if (partial < 0) { //start looking again from i+1 index
+            if (partial <= 0) { //start looking again from i+1 index
                 partial = 0;
                 leftIndex = i + 1;
             }
